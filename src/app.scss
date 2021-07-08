@@ -1,0 +1,27 @@
+.App {
+  height: 100vh;
+  .sections {
+    width: 100%;
+    height: calc(100vh - 70px);
+    background-color: lightsalmon;
+    position: relative;
+    top: 70px;
+    scroll-behavior: smooth;
+    scroll-snap-type: y proximity; // this will bring the complete page whichever is closer while scrolling left in between , so that completer always page is shown
+    scrollbar-width: none; // for firebox browser
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    // For each element inside do this , syntax is like
+    > * {
+      width: 100vw;
+      height: calc(100vh - 70px);
+      scroll-snap-align: start;
+    }
+  }
+}
+
+  #social {  
+    height: 100px;
+    width: 100%;
+    }
